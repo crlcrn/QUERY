@@ -1,0 +1,7 @@
+select s1.id ,s2.id  
+from sighting s1, sighting s2, neighbor n  
+where year(s1.`datetime`) = 1980 
+and year(s1.`datetime`)= year(s2.`datetime`)
+and s1.state = n.state1 and s2.state = n.state2 
+
+# due avvistamenti sono legati con un arco se  sono avvenuti in due diversi stati confinanti, nello stesso anno
